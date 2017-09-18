@@ -14,7 +14,7 @@ function FindProxyForURL(url, host) {
     dnsDomainIs(host, 'reddit.com') ||
     dnsDomainIs(host, 'facebook.com') ||
     dnsDomainIs(host, 'instagram.com') ||
-    dnsDomainIs(host, 'pinternet.com') ||
+    dnsDomainIs(host, 'pinterest.com') ||
     dnsDomainIs(host, 'snapchat.com') ||
     dnsDomainIs(host, 'twitter.com') ||
     dnsDomainIs(host, 'youtube.com') ||
