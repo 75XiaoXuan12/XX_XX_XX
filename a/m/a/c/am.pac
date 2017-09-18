@@ -1,10 +1,13 @@
 function FindProxyForURL(url, host) {
-    var p = 'PROXY 54.223.174.122:9292';
+    var autoproxy = 'PROXY 54.223.174.122:9292';
+	var defaultproxy = 'DIRECT';
     if (isPlainHostName(host) ||
         host.indexOf('127.') == 0 ||
         host.indexOf('192.168.') == 0 ||
         shExpMatch(host, 'localhost.*')) 
-    { return 'DIRECT'; } 
+    {
+        return 'DIRECT';
+    } 
     else if (shExpMatch(host, '*.google*.*') ||
 		dnsDomainIs(host, 'google.com') ||
 		dnsDomainIs(host, 'reddit.com') ||
@@ -23,6 +26,11 @@ function FindProxyForURL(url, host) {
 		dnsDomainIs(host, 'android.com') ||
 		dnsDomainIs(host, 'chrome.com') ||
 		dnsDomainIs(host, 'chromium.org'))
-    { return p; }
-    else { return 'DIRECT'; }
+    {    
+		return autoproxy;
+    } 
+    else
+	{
+        return 'DIRECT';
+    } 
 }
