@@ -10,25 +10,28 @@ function FindProxyForURL(url, host) {
     return 'DIRECT';
   }
   else if (
-	//google
-	shExpMatch(host, '*.google*.*') ||	
-	dnsDomainIs(host, 'google.com') ||
-	dnsDomainIs(host, 'gstatic.com') ||
-	//social
-	dnsDomainIs(host, 'facebook.com') ||
-	dnsDomainIs(host, 'pinterest.com') ||
-	dnsDomainIs(host, 'reddit.com') ||
-	dnsDomainIs(host, 'instagram.com') ||
-	dnsDomainIs(host, 'snapchat.com') ||
-	//video
-	dnsDomainIs(host, 'youtube.com') ||
-	//tools
-	dnsDomainIs(host, 'dropbox.com') ||
-	dnsDomainIs(host, 'droppages.com') ||
-	dnsDomainIs(host, 'goo.gl') ||
-	dnsDomainIs(host, 'sublimetext.com') ||
-	dnsDomainIs(host, 'chrome.com') ||
-	dnsDomainIs(host, 'chromium.org'))
+    //google
+    shExpMatch(host, '*.google*.*') ||
+    shExpMatch(host, 'google*.*') ||
+    dnsDomainIs(host, 'google.com') ||
+    dnsDomainIs(host, 'gstatic.com') ||
+    //social
+    dnsDomainIs(host, 'facebook.com') ||
+    dnsDomainIs(host, 'pinterest.com') ||
+    dnsDomainIs(host, 'reddit.com') ||
+    dnsDomainIs(host, 'instagram.com') ||
+    dnsDomainIs(host, 'snapchat.com') ||
+    //youtube
+    dnsDomainIs(host, 'youtube.com') ||
+    dnsDomainIs(host, 'ggpht.com') ||
+    dnsDomainIs(host, 'ytimg.com') ||
+    //tools
+    dnsDomainIs(host, 'dropbox.com') ||
+    dnsDomainIs(host, 'droppages.com') ||
+    dnsDomainIs(host, 'goo.gl') ||
+    dnsDomainIs(host, 'sublimetext.com') ||
+    dnsDomainIs(host, 'chrome.com') ||
+    dnsDomainIs(host, 'chromium.org'))
   {
     return autoproxy;
   }
