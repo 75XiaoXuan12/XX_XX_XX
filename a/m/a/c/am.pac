@@ -26,7 +26,8 @@ function FindProxyForURL(url, host) {
     dnsDomainIs(host, 'sublimetext.com') ||
     dnsDomainIs(host, 'android.com') ||
     dnsDomainIs(host, 'chrome.com') ||
-    dnsDomainIs(host, 'chromium.org'))
+    dnsDomainIs(host, 'chromium.org') ||
+	dnsDomainIs(host, '.googleapis.com'))
   {
     return autoproxy;
   }
