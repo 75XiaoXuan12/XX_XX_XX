@@ -27,7 +27,8 @@ function FindProxyForURL(url, host) {
     dnsDomainIs(host, 'android.com') ||
     dnsDomainIs(host, 'chrome.com') ||
     dnsDomainIs(host, 'chromium.org') ||
-	dnsDomainIs(host, '.googleapis.com'))
+	dnsDomainIs(host, '.googleapis.com') ||
+	dnsDomainIs(host, '.googlesyndication.com'))
   {
     return autoproxy;
   }
