@@ -9,26 +9,26 @@ function FindProxyForURL(url, host) {
   {
     return 'DIRECT';
   }
-  else if (shExpMatch(host, '*.google*.*') ||
-    dnsDomainIs(host, 'google.com') ||
-    dnsDomainIs(host, 'reddit.com') ||
-    dnsDomainIs(host, 'facebook.com') ||
-    dnsDomainIs(host, 'instagram.com') ||
-    dnsDomainIs(host, 'pinterest.com') ||
-    dnsDomainIs(host, 'snapchat.com') ||
-    dnsDomainIs(host, 'twitter.com') ||
-    dnsDomainIs(host, 'youtube.com') ||
-    dnsDomainIs(host, 'goo.gl') ||
-    dnsDomainIs(host, 'dropbox.com') ||
-    dnsDomainIs(host, 'droppages.com') ||
-    dnsDomainIs(host, 'github.com') ||
-    dnsDomainIs(host, 'gist.github.com') ||
-    dnsDomainIs(host, 'sublimetext.com') ||
-    dnsDomainIs(host, 'android.com') ||
-    dnsDomainIs(host, 'chrome.com') ||
-    dnsDomainIs(host, 'chromium.org') ||
-	dnsDomainIs(host, '.googleapis.com') ||
-	dnsDomainIs(host, '.googlesyndication.com'))
+  else if (
+	//google
+	shExpMatch(host, '*.google*.*') ||	
+	dnsDomainIs(host, 'google.com') ||
+	dnsDomainIs(host, 'gstatic.com') ||
+	//social
+	dnsDomainIs(host, 'facebook.com') ||
+	dnsDomainIs(host, 'pinterest.com') ||
+	dnsDomainIs(host, 'reddit.com') ||
+	dnsDomainIs(host, 'instagram.com') ||
+	dnsDomainIs(host, 'snapchat.com') ||
+	//video
+	dnsDomainIs(host, 'youtube.com') ||
+	//tools
+	dnsDomainIs(host, 'dropbox.com') ||
+	dnsDomainIs(host, 'droppages.com') ||
+	dnsDomainIs(host, 'goo.gl') ||
+	dnsDomainIs(host, 'sublimetext.com') ||
+	dnsDomainIs(host, 'chrome.com') ||
+	dnsDomainIs(host, 'chromium.org'))
   {
     return autoproxy;
   }
