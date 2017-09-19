@@ -33,7 +33,6 @@ function FindProxyForURL(url, host) {
     dnsDomainIs(host, 'chromium.org') ||
     //others
     dnsDomainIs(host, 'applift.com') ||
-    dnsDomainIs(host, 'awsstatic.com') ||
     dnsDomainIs(host, 'softlayer.com') ||
     dnsDomainIs(host, 'ibm.com') ||
     dnsDomainIs(host, 'softlayer.net') ||
@@ -86,6 +85,7 @@ function FindProxyForURL(url, host) {
     dnsDomainIs(host, 'android.com') ||
     dnsDomainIs(host, 'datastax.github.io') ||
     dnsDomainIs(host, 'cloudfront.net') ||
+    dnsDomainIs(host, 'awsstatic.com') ||
     dnsDomainIs(host, 'aws.amazon.com') ||
     dnsDomainIs(host, 'amazonaws.com') ||
     dnsDomainIs(host, 'amazonwebservices.com'))
