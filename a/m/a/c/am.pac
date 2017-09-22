@@ -19,6 +19,7 @@ function FindProxyForURL(url, host) {
     dnsDomainIs(host, 'ytimg.com') ||
     //social
     dnsDomainIs(host, 'facebook.com') ||
+    dnsDomainIs(host, 'twitter.com') ||
     dnsDomainIs(host, 'pinterest.com') ||
     dnsDomainIs(host, 'reddit.com') ||
     dnsDomainIs(host, 'instagram.com') ||
